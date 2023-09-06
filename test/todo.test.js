@@ -46,8 +46,9 @@ describe("PUT /api/todos/:id", () => {
       completed: true,
     };
 
+    const id = "_your_test id here"; //send any test ID from db
     // Assuming you have a valid todo ID
-    const todoIdToUpdate = "64f6da46cfefaa81c50e47e5";
+    const todoIdToUpdate = id;
 
     chai
       .request("http://localhost:3000")
@@ -63,10 +64,11 @@ describe("PUT /api/todos/:id", () => {
   });
 });
 
+const deleteID = "_your_test id here"; //send any test ID from db
 describe("DELETE /api/todos/:id", () => {
   it("should delete a todo", (done) => {
     // Assuming you have a valid todo ID to delete
-    const todoIdToDelete = "64f6da46cfefaa81c50e47e5";
+    const todoIdToDelete = deleteID;
 
     chai
       .request("http://localhost:3000")
