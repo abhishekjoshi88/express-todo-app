@@ -14,6 +14,8 @@ app.use(bodyParser.json());
 // Use routes
 app.use("/api/todos", todoRoutes);
 
+app.get("/", (req, res) => res.send(`<h1>Hi there </h1>`));
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
